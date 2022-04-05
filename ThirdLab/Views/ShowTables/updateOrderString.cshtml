@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "updateOrderString";
+}
+
+@model ThirdLab.Models.Orders
+<h2>Покупатель № @Model.Id_order</h2>
+@using (Html.BeginForm("updateOrderString", "ShowTables", FormMethod.Post))
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.Id_order)
+        <p>
+            @Html.LabelFor(m => m.Amount, "Сумма")
+            <br />
+            @Html.EditorFor(m => m.Amount)
+
+        </p>
+
+        <p><input type="submit" value="Отправить" /></p>
+    </fieldset>
+}

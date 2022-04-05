@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "redirectOrderUpdate";
+}
+
+@using (Html.BeginForm("redirectOrderUpdate", "ShowTables", FormMethod.Post))
+{
+    <p>Введите id покупателя</p>
+    <input type="text" name="inputName" />
+    <button type="submit">Изменить данные</button>
+}

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "createStringCustomers";
+}
+
+@model ThirdLab.Models.Customers
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Новый покупатель</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name, "Имя")
+    <br />
+    @Html.EditorFor(model => model.Name)
+    <br />
+    <br />
+    <input type="submit" value="Добавить" />
+}<h2>CreateCustomers</h2>
+

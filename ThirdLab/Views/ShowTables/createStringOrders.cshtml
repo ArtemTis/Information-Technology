@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "createStringOrders";
+}
+
+@model ThirdLab.Models.Orders
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Новый покупатель</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Amount, "Сумма")
+    <br />
+    @Html.EditorFor(model => model.Amount)
+    <br />
+    <br />
+    <input type="submit" value="Добавить" />
+}<h2>CreateCustomers</h2>

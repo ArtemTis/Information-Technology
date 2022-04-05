@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "OrderTable";
+}
+
+@model IEnumerable<ThirdLab.Models.Orders>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>Клиенты</h3>
+    <table>
+        <tr class="header">
+            <td><p>Имя</p></td>
+        </tr>
+        @foreach (ThirdLab.Models.Orders b in Model)
+        {
+            <tr>
+                <td><p>@b.Amount</p></td>
+            </tr>
+        }
+    </table>
+</div>

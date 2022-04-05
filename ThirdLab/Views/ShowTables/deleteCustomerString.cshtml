@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "deleteCustomerString";
+}
+
+@model ThirdLab.Models.Customers
+
+<h2>Удаление Customers</h2>
+<dl>
+    <dt>Данные</dt>
+    <dd>
+        @Html.DisplayFor(mod => mod.Name)
+    </dd>
+
+</dl>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Удалить" />
+}

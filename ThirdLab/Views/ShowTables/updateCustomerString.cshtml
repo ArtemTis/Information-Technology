@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "updateCustomerString";
+}
+
+@model ThirdLab.Models.Customers
+<h2>Покупатель № @Model.Id_Customer</h2>
+@using (Html.BeginForm("updateCustomerString", "ShowTables", FormMethod.Post))
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.Id_Customer)
+        <p>
+            @Html.LabelFor(m => m.Name, "Имя")
+            <br />
+            @Html.EditorFor(m => m.Name)
+
+        </p>
+
+        <p><input type="submit" value="Отправить" /></p>
+    </fieldset>
+}
