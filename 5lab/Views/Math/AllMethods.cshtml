@@ -1,0 +1,69 @@
+﻿@model prak5MVC.Models.Calculate
+
+
+@{
+    ViewBag.Title = "AllMethods";
+}
+
+<html>
+
+<head>
+
+    <style>
+        #res {
+            width: 400px; /* Ширина поля в пикселах */
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <h2>Calculate</h2>
+
+    <div>
+
+        @using (Html.BeginForm("AllMethods", "Math", FormMethod.Post))
+        {
+
+            <div>
+                <label>Первая цифра</label>
+                <br />
+                <input type="text" step="any" id="number1" name="number1" value="@Model.number1" />
+            </div>
+
+            <div>
+                <label>Вторая цифра</label>
+                <br />
+                <input type="text" step="any" id="number2" name="number2" value="@Model.number2" />
+            </div>
+
+            <div>
+                <label>Результат</label>
+                <br />
+                <input type="text" id="result" name="result" value="@Model.result" />
+                <input type="text" name="res" id="res" value="@Model.error" />
+            </div>
+
+            <button type="submit" id="sum" value="sum" name="calc">+</button>
+            <button type="submit" id="min" value="min" name="calc">-</button>
+            <button type="submit" id="mult" value="mult" name="calc">*</button>
+            <button type="submit" id="div" value="div" name="calc">/</button>
+
+            
+
+
+        }
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+
+
+
