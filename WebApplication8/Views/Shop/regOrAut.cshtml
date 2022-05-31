@@ -1,0 +1,32 @@
+﻿
+@model WebApplication8.Models.Users
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="log_btn-wrap">
+    <div>
+        <h2 style="display:block;">Введите данные</h2>
+
+        @using (Html.BeginForm())
+        {
+            @Html.LabelFor(model => model.name, "Имя")
+            <br />
+            @Html.EditorFor(model => model.name)
+            <br />
+            <br />
+            @Html.LabelFor(model => model.email, "Email")
+            <br />
+            @Html.EditorFor(model => model.email)
+            <br />
+            <br />
+            @Html.LabelFor(model => model.phone, "Телефон")
+            <br />
+            @Html.EditorFor(model => model.phone)
+            <br />
+            <br />
+            <input class="logIn" type="submit" value="Войти" />
+        }
+    </div>
+</div>
+

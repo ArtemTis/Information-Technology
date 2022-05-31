@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "shop";
+}
+
+@model IEnumerable<WebApplication8.Models.Orders>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="log_btn-wrap">
+    <div class="column">
+        <div class="shop" >
+            <a href="/Shop/cabinet">
+                @*<button>Корзина</button>*@
+                Корзина
+            </a>
+        </div>
+        
+        <div>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.cost)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.amount)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.cost)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.amount)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Купить", "Details", new { id = item.id_order })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

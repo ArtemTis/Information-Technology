@@ -1,0 +1,44 @@
+﻿@model WebApplication8.Models.Orders
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="log_btn-wrap">
+    <div class="column">
+
+        <h2>Удалить товар</h2>
+
+        <div>
+            <table>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.name)</td>
+                    <td>@Html.DisplayFor(model => model.name)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.cost)</td>
+                    <td>@Html.DisplayFor(model => model.cost)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.amount)</td>
+                    <td>@Html.DisplayFor(model => model.amount)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.amount_add)</td>
+                    <td>@Html.DisplayFor(model => model.amount_add)</td>
+                </tr>
+            </table>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Удалить" class="btn btn-default delBtn" />
+                    @Html.ActionLink("К списку товаров", "Index")
+                </div>
+            }
+        </div>
+
+    </div>
+</div>

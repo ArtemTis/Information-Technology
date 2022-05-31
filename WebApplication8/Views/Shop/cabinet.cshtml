@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "cabinet";
+}
+
+<div class="log_btn-wrap">
+    <div class="column">
+
+        <div>
+            <table>
+                <tr class="header">
+                    <td><p>Название</p></td>
+                    <td><p>Стоимость</p></td>
+                    <td><p>Количество</p></td>
+                    <td></td>
+                </tr>
+                @foreach (WebApplication8.Models.Orders b in ViewBag.Orders)
+                {
+                    <tr>
+                        <td><p>@b.name</p></td>
+                        <td><p>@b.cost</p></td>
+                        <td><p>@b.amount_add</p></td>
+
+                    </tr>
+                }
+            </table>
+        </div>
+
+        @Html.ActionLink("Оформить заказ", "buyAll")
+        <br />
+        @Html.ActionLink("Выйти", "logout")
+    </div>
+</div>

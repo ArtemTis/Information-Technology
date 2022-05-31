@@ -1,0 +1,33 @@
+﻿@model WebApplication8.Models.Orders
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="log_btn-wrap">
+    <div class="column">
+
+        <h2>О товаре</h2>
+
+        <div>
+            <table>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.name)</td>
+                    <td>@Html.DisplayFor(model => model.name)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.cost)</td>
+                    <td>@Html.DisplayFor(model => model.cost)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.amount)</td>
+                    <td>@Html.DisplayFor(model => model.amount)</td>
+                </tr>
+            </table>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.id_order })
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</div>
